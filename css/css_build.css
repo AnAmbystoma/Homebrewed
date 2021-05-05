@@ -112,6 +112,7 @@ html, body{
 }
 
 .col > div > img:hover{
+    border:dotted;
     border-width: 3px;
 }
 

@@ -144,6 +144,7 @@ html, body{
 .col > div > img:hover, #optional > div> img:hover{
     position: relative;
     z-index: 3;
+    border:dotted;
     border-width: 3px;
 }
 
