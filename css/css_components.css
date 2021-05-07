@@ -3,6 +3,8 @@
     --buttontopmar: 0.2vw;
     --btnsz: 100px;
     --linewidth: 0px;
+    --optionalnamemargin: 100px;
+    --namefonts: 20px;
 }
 
 html, body{
@@ -76,7 +78,8 @@ html, body{
     height: auto;
     width: 19.5%;
     float:left;
-    padding-top: 2%;
+    padding-top: 2.5%;
+    text-align: center;
 }
 
 #col1, #col2{
@@ -128,7 +131,10 @@ html, body{
 #col2 > img{
     border: solid;
     border-color: black;
-    border-radius: 5%;
+    border-radius: 25px;
+}
+
+#col2 > img:not(#setup){
     margin-top: 10%;
 }
 
@@ -141,11 +147,38 @@ html, body{
     z-index: 3;
 }
 
-.col > div > img:hover, #optional > div> img:hover{
-    position: relative;
-    z-index: 3;
-    border:dotted;
-    border-width: 3px;
+.name:hover{
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0.6;
+}
+
+.name{
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    color:white;
+    border-width: 1%;
+    border: solid;
+    border-color: black;
+    border-radius: 25px;
+    font-size: var(--namefonts);
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.col > div > .name{
+    right:0;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
 }
 
 #lines{
@@ -162,12 +195,32 @@ html, body{
     float:left;
 }
 #optional > div{
-    width: 20%;
+    width:var(--btnsz);
     height: 100%;
     margin:2.5%;
     float:left;
 }
 
+#optional > div > .name{
+    width:var(--btnsz); 
+    height:var(--btnsz); 
+    margin-top: var(--optionalnamemargin);
+}
+
+p{
+    font-size:  var(--namefonts);
+    text-align: center;
+}
+
+#casingheader{
+    position: absolute;
+    margin-top: calc(5*var(--btnsz));
+    margin-left: calc(0.5*var(--btnsz));
+}
+
+#setupheader{
+    margin-top: -2.5%;
+}
 
 #popup{
     display: none; 

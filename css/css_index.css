@@ -8,6 +8,7 @@ html, body{
     margin:0px;
     min-height: 500px;
     min-width:300px;
+    font-family: monospace;
 }
 
 #banner{
@@ -23,7 +24,6 @@ html, body{
     position: absolute;
     left:4px;
     top:4px;
-    font-family: monospace;
     font-size: 30px;
     font-weight: bold;
     padding-left: 4px;
@@ -33,7 +33,6 @@ html, body{
 
 #text{
     height:34%;
-    font-family: monospace;
     font-weight: bold;
     text-align: center;
     background-color: beige;
@@ -68,31 +67,50 @@ html, body{
         padding-left:50px;
     }
 }
+
 #nav{
-    margin:0px;
-    margin-bottom: 0px;
-    height: 33%;
-    text-align: center;
     background-image: url('Resources/Navigation.gif');
     background-repeat: no-repeat;
     background-size: cover;
+    margin:0px;
+    margin-bottom: 0px;
+    height: 33%;
 }
-#nav > *{
+
+#navbut, #navtitles{
+    margin:0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#navbut > .nav{
     background: rgb(255, 255, 255,0.35);
-    margin-right: 1vw;
-    margin-left: 1vw;
     margin-top: var(--buttontopmar);
-    display:inline-block;
-    width:var(--buttonsize);
     height:var(--buttonsize);
     border-radius: 50%;
 }
 
-#nav > *:hover{
+#navbut > .nav, #navtitles > .navtitle{
+    height:var(--buttonsize);
+    width:var(--buttonsize);
+    margin-right: 1vw;
+    margin-left: 1vw;
+    display:inline-block;
+}
+
+#navtitles > .navtitle{
+    background: black;
+    color: white;
+    opacity: 70%;
+    font-size:15px;
+    height:20%;
+}
+
+#navbut > .nav:hover{
     background: rgb(255, 255, 255,0.7);
 }
 
-#nav > * > a > img{
+#navbut > * > a > img{
     width:90%;
     height:100%;
     object-fit: contain;

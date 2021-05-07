@@ -8,6 +8,7 @@ html, body{
     margin:0px;
     min-height: 700px;
     min-width:300px;
+    font-family: monospace;
 }
 
 #banner{
