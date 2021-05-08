@@ -6,15 +6,21 @@ var header = document.getElementById("popupheader");
 var image = document.getElementById("popupimg");
 
 function resizenav(){
-    var w = Math.max(400,window.innerWidth);
+    var w = Math.min(Math.max(400,window.innerWidth),900);
+    var vw = window.innerWidth;
+    var linew = Math.min(Math.max(400,window.innerWidth),910);
     var h = Math.max(700,window.innerHeight)*80/100*5/100;
+    root.style.setProperty('--visualw', String(w) + 'px');
     root.style.setProperty('--buttonsize', String(h) + 'px');
     root.style.setProperty('--buttontopmar', String((h*100/80 - h)/2.5) + 'px');
     root.style.setProperty('--btnsz', String(w*19.5/100) + 'px');
-    root.style.setProperty('--linewidth', String(Math.max(410,w)*97/100) + 'px');
+    root.style.setProperty('--linewidth', String(Math.max(410,linew)*97/100) + 'px');
     popup.style.fontSize = String(Math.min(window.innerWidth/35, window.innerHeight/40)) + 'px';
-    root.style.setProperty('--optionalnamemargin', String((w*19.5/100+10)*-1) + 'px');
+    root.style.setProperty('--optionalnamemargin', String((w*19.5/100+15)*-1) + 'px');
     root.style.setProperty('--namefonts', String(w*19.5/100*15/100) + 'px');
+
+    if (vw>900) root.style.setProperty('--aligndiagram', String((vw-900)/2) + 'px');
+    else root.style.setProperty('--aligndiagram', '0');
 }
 
 
