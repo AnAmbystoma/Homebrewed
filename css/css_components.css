@@ -5,16 +5,19 @@
     --linewidth: 0px;
     --optionalnamemargin: 100px;
     --namefonts: 20px;
+    --visualw:900px;
+    --aligndiagram:0px;
 }
 
 html, body{
+    text-align: center;
     height: 100%;
     min-height: 700px;
     margin:0;
     min-width:400px;
     background-color: cornsilk;
     font-family: monospace;
-    font-size:20px;
+    font-size:30px;
 }
 
 #banner{
@@ -28,15 +31,16 @@ html, body{
 }
 
 #header{
+    text-align: left;
     position: absolute;
-    left:4px;
-    top:4px;
+    left:8px;
+    top:8px;
     font-family: monospace;
-    font-size: 30px;
+    font-size: 45px;
     font-weight: bold;
     padding-left: 4px;
     padding-bottom: 3px;
-    width: 198px;
+    width: 300px;
     background: rgb(255, 255, 255,0.5);
 }
 
@@ -77,14 +81,16 @@ html, body{
 .col{
     height: auto;
     width: 19.5%;
+    max-width: 175.5px;
     float:left;
-    padding-top: 2.5%;
+    padding-top: calc(0.025*var(--visualw));;
     text-align: center;
 }
 
+
 #col1, #col2{
     margin:0;
-    margin-right: 5%;
+    margin-right: calc(0.05*var(--visualw));
 }
 
 .col > img, .col > * > img{
@@ -94,6 +100,7 @@ html, body{
 
 #col1 > div, #col3 > div{
     width: 100%;
+    max-height: 175.5px;
     height: var(--btnsz);
     float: left;
 }
@@ -102,7 +109,7 @@ html, body{
     width: 100%;
     height: 100%;
     object-fit: scale-down;
-    border-width: 1%;
+    border-width: calc(0.01*var(--visualw));
     border: solid;
     border-color: black;
     border-radius: 25px;
@@ -111,10 +118,13 @@ html, body{
 
 #col2{
     width: 50%;
+    max-width:450px;
 }
 
 #col2 > div{
     width: 40%;
+    max-height: 175.5px;
+    max-width: 175.5px;
     height: var(--btnsz);
     float: left;
     margin: 5%;
@@ -162,7 +172,7 @@ html, body{
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
     color:white;
-    border-width: 1%;
+    border-width: calc(0.01*var(--visualw));
     border: solid;
     border-color: black;
     border-radius: 25px;
@@ -191,13 +201,13 @@ html, body{
 
 #optional{
     height:var(--btnsz);
-    width:100%;
+    width:var(--visualw);
     float:left;
 }
 #optional > div{
     width:var(--btnsz);
     height: 100%;
-    margin:2.5%;
+    margin: 2.5%;
     float:left;
 }
 
@@ -208,21 +218,22 @@ html, body{
 }
 
 p{
-    font-size:  var(--namefonts);
+    font-size:  calc(var(--namefonts)*1.5);
     text-align: center;
 }
 
 #casingheader{
     position: absolute;
     margin-top: calc(5*var(--btnsz));
-    margin-left: calc(0.5*var(--btnsz));
+    margin-left: calc(0.2*var(--btnsz));
 }
 
 #setupheader{
-    margin-top: -2.5%;
+    margin-top: -10%;
 }
 
 #popup{
+    text-align: left;
     display: none; 
     position: fixed;
     width: 100%;
@@ -254,4 +265,8 @@ p{
     width:auto;
     background-size:contain;
     background-repeat: no-repeat;
+}
+
+#optional, #lines, #col1{
+    margin-left:var(--aligndiagram);
 }
