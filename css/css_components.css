@@ -106,12 +106,10 @@ html, body{
 }
 
 .col > div > img, #optional > div > img{
-    width: 100%;
-    height: 100%;
+    width: calc(0.96*var(--btnsz));
+    height: calc(0.96*var(--btnsz));
     object-fit: scale-down;
-    border-width: calc(0.01*var(--visualw));
-    border: solid;
-    border-color: black;
+    border: calc(0.02*var(--btnsz)) solid #000;
     border-radius: 25px;
     background-color: white;
 }
@@ -132,6 +130,7 @@ html, body{
 
 #col1 > div{
     margin-bottom: 25%;
+    float:right;
 }
 
 #col2 > div{
@@ -172,9 +171,7 @@ html, body{
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
     color:white;
-    border-width: calc(0.01*var(--visualw));
-    border: solid;
-    border-color: black;
+    border: calc(0.02*var(--btnsz)) solid #000;
     border-radius: 25px;
     font-size: var(--namefonts);
     -webkit-transition: opacity 0.5s ease-in-out;
@@ -187,8 +184,8 @@ html, body{
     right:0;
     left:0;
     top:0;
-    width: 100%;
-    height: 100%;
+    width: 96%;
+    height: 96%;
 }
 
 #lines{
@@ -201,19 +198,18 @@ html, body{
 
 #optional{
     height:var(--btnsz);
-    width:var(--visualw);
-    float:left;
+    width:var(--linewidth);
 }
 #optional > div{
-    width:var(--btnsz);
+    width:calc(0.96*var(--btnsz));
     height: 100%;
-    margin: 2.5%;
+    margin: 2.7%;
     float:left;
 }
 
 #optional > div > .name{
-    width:var(--btnsz); 
-    height:var(--btnsz); 
+    width: calc(0.96*var(--btnsz));
+    height: calc(0.96*var(--btnsz));
     margin-top: var(--optionalnamemargin);
 }
 
