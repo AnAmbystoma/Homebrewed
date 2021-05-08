@@ -7,17 +7,17 @@ var confetti = document.getElementById("confetti");
 
 function resizenav(){
     var w = Math.max(400,window.innerWidth);
-    var disw =  Math.min(Math.max(400,window.innerWidth),600);
+    var disw =  Math.min(Math.max(400,window.innerWidth),900);
     var h = Math.max(700,window.innerHeight)*80/100*5/100;
     root.style.setProperty('--buttonsize', String(h) + 'px');
     root.style.setProperty('--buttontopmar', String((h*100/80 - h)/2.5) + 'px');
-    root.style.setProperty('--btnsz', String(disw*19/100*98/100) + 'px');
+    root.style.setProperty('--btnsz', String(disw*19/100) + 'px');
     popup.style.fontSize = String(Math.min(window.innerWidth/35, window.innerHeight/40)) + 'px';
     root.style.setProperty('--col1align', String(document.getElementById('col2').clientHeight*21/100) + 'px');
     root.style.setProperty('--col3align', String(document.getElementById('col2').clientHeight*16/100) + 'px');
     root.style.setProperty('--steptreeh', String(document.getElementById('col2').clientHeight) + 'px');
-    root.style.setProperty('--div3namemargin', String(-1*(disw*19/100*96/100+7)) + 'px');
-    if (w>600) root.style.setProperty('--aligndiagram', String((w-600)/2 + w*1/100) + 'px');
+    root.style.setProperty('--div3namemargin', String(-1*(disw*19/100+5)) + 'px');
+    if (w>900) root.style.setProperty('--aligndiagram', String((w-900)/2 + w*1/100) + 'px');
     else root.style.setProperty('--aligndiagram', '1%');
 }
 

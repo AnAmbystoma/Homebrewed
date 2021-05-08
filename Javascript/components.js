@@ -16,7 +16,7 @@ function resizenav(){
     root.style.setProperty('--btnsz', String(w*19.5/100) + 'px');
     root.style.setProperty('--linewidth', String(Math.max(410,linew)*97/100) + 'px');
     popup.style.fontSize = String(Math.min(window.innerWidth/35, window.innerHeight/40)) + 'px';
-    root.style.setProperty('--optionalnamemargin', String((w*19.5/100+15)*-1) + 'px');
+    root.style.setProperty('--optionalnamemargin', String((w*19.5/100+8)*-1) + 'px');
     root.style.setProperty('--namefonts', String(w*19.5/100*15/100) + 'px');
 
     if (vw>900) root.style.setProperty('--aligndiagram', String((vw-900)/2) + 'px');
