@@ -11,9 +11,9 @@
     </div>
 
     <div id='nav'>
-        <div class = 'nav' id='home'><a href='index.html'><img src='css/Resources/home.png'></a></div>
-        <div class = 'nav' id='about'><a href='about.html'><img src='css/Resources/about.png'></a></div>
-        <div class = 'nav' id='components'><a href='components.html'><img src='css/Resources/components.png'></a></div>
+        <div class = 'nav' onclick="window.open('index.html','_self')"><a href='index.html'><img src='css/Resources/home.png'>Home</a></div>
+        <div class = 'nav' onclick="window.open('about.html','_self')"><a href='about.html'><img src='css/Resources/about.png'>About</a></div>
+        <div class = 'nav'  onclick="window.open('components.html','_self')"><a href='components.html'><img src='css/Resources/components.png'>Components</a></div>
     </div>
     
     <div class='col' id='col1'>
@@ -46,9 +46,9 @@
         <div id = 'confetti'></div>
         <div id='popupcontent'>
             <h1 style='margin-top:5px' id='popupheader'>Component</h1>
-            <div id='popupimg'></div>
+            <div id='popuptop'></div>
             <br><div id='popuptxt'>text added by js</div>
-        </div>
+            <div id='popuptips'>˅</div>
     </div>
     
     <script src="Javascript/build.js"></script>

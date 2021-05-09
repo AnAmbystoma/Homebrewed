@@ -11,9 +11,9 @@
     </div>
 
     <div id='nav'>
-        <div class = 'nav' id='home'><a href='index.html'><img src='css/Resources/home.png'></a></div>
-        <div class = 'nav' id='about'><a href='about.html'><img src='css/Resources/about.png'></a></div>
-        <div class = 'nav' id='build'><a href='build.html'><img src='css/Resources/build.png'></a></div>
+        <div class = 'nav' onclick="window.open('index.html','_self')"><a href='index.html'><img src='css/Resources/home.png'>Home</a></div>
+        <div class = 'nav' onclick="window.open('about.html','_self')"><a href='about.html'><img src='css/Resources/about.png'>About</a></div>
+        <div class = 'nav' onclick="window.open('build.html','_self')"><a href='build.html'><img src='css/Resources/build.png'>Build</a></div>
     </div>
     <br><p style='margin-bottom:0;'>Computer components</p><br><br>
 
@@ -52,7 +52,7 @@
     <div id='popup'>
         <div id='popupcontent'>
             <h1 style='margin-top:5px' id='popupheader'>Component</h1>
-            <div id='popupimg'></div>
+            <div id='popupimg' onload="resizenav()"></div>
             <br><div id='popuptxt'>text added by js</div>
         </div>
     </div>
