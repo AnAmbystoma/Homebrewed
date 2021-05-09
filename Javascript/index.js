@@ -2,7 +2,7 @@ var root = document.documentElement;
 
 function resizenav(){
     var w = Math.max(300,window.innerWidth)*28/100;
-    var h = Math.max(850,window.innerHeight)*90/100*33/100;
+    var h = Math.max(620,window.innerHeight)*90/100*33/100;
     if (w>h){
         root.style.setProperty('--buttonsize', String(h*0.85) + 'px');
         root.style.setProperty('--buttontopmar', String((h*100/90 - h)/2.5) + 'px');
@@ -10,7 +10,6 @@ function resizenav(){
         root.style.setProperty('--buttonsize', String(w*0.85) + 'px');
         root.style.setProperty('--buttontopmar', String((h*100/90 - w)/2.5) + 'px');
     }
-    
 }
 
 
